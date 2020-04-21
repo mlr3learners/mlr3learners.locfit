@@ -1,7 +1,7 @@
-context("<type>.<algorithm>")
+context("dens.locfit")
 
 test_that("autotest", {
-  learner = Learner<algorithm>$new()
+  learner = LearnerDensLocfit$new()
   expect_learner(learner)
   result = run_autotest(learner)
   expect_true(result, info = result$error)

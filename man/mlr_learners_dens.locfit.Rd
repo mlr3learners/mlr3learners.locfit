@@ -3,7 +3,7 @@
 \name{mlr_learners_dens.locfit}
 \alias{mlr_learners_dens.locfit}
 \alias{LearnerDensLocfit}
-\title{Density Local Estimator Learner}
+\title{Density Locfit Learner}
 \description{
 A \link[mlr3proba:LearnerDens]{mlr3proba::LearnerDens} implementing locfit from package
 \CRANpkg{locfit}.

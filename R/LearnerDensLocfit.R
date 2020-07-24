@@ -65,16 +65,17 @@ LearnerDensLocfit = R6Class("LearnerDensLocfit",
 
       data = task$truth()
 
-      pdf <- function(x1) {
+      pdf <- function(x) {
       }
       body(pdf) <- substitute({
-        mlr3misc::invoke(locfit::density.lf, x = data, ev = x1, .args = pars)$y
+        mlr3misc::invoke(locfit::density.lf, x = data, ev = x, .args = pars)$y
       })
 
       distr6::Distribution$new(
         name = paste("LocFit Density", self$param_set$values$window),
         short_name = paste0("LocFitDens", self$param_set$values$window),
-        pdf = pdf)
+        pdf = pdf,
+        type = set6::Reals$new())
     },
 
     .predict = function(task) {
